@@ -1,0 +1,201 @@
+/* Use this in the needed background-color: var(--main-bg-color); */
+:root {
+  --main-green-color: #056517;
+  --main-red-color: #bf1029;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Verdana", "Arial", sans-serif;
+  line-height: 1.3;
+  color: #373737;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Header */
+header {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  margin: auto 1rem;
+}
+
+.header-container p {
+  font-size: 1.5rem;
+  margin: 0rem 1rem;
+}
+
+.header-container button {
+  background-color: var(--main-green-color);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Display */
+#main-display {
+  display: flex;
+  flex-direction: row;
+}
+
+#main-display-right {
+  width: 80%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journal-entries {
+  width: 50%;
+  margin-top: 2rem;
+}
+
+.journal-entry {
+  width: 100%;
+  border: 1px solid grey;
+  height: 14rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.journal-date {
+  font-size: 1rem;
+  color: var(--main-green-color);
+  font-weight: bold;
+}
+
+.journal-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.journal-content {
+  white-space: pre-wrap;
+  overflow: hidden;
+  font-size: 1rem;
+  height: 5rem;
+  cursor: pointer;
+  color: black;
+}
+
+/* Calendar */
+#calendar {
+  width: 20%;
+  border-right: 1px solid grey;
+  height: calc(100vh - 4rem);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+#create-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  background-color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 30px;
+  box-shadow: 0px 2px 4px 3px rgba(0, 0, 0, 0.2);
+  gap: 10px;
+  cursor: pointer;
+}
+
+#create-new:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#create-new span {
+  color: var(--main-green-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#create-new {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Journal Entry */
+.new-journal-entry {
+  padding: 2rem;
+  height: 100vh;
+}
+
+.new-journal-entry .journal-entry {
+  padding: 2rem;
+}
+
+.journal-entry-header {
+  display: flex;
+  align-items: center;
+}
+
+.react-datepicker__input-container input,
+.react-datepicker-ignore-onclickoutside {
+  border: none;
+  font-size: 1rem;
+  color: var(--main-green-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.react-datepicker__input-container input:focus,
+.react-datepicker-ignore-onclickoutside:focus {
+  outline: none;
+  caret-color: transparent;
+}
+
+.react-datepicker__day--outside-month {
+  color: transparent;
+  pointer-events: none;
+}
+
+.journal-entry-header button {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.journal-entry-header .discard {
+  color: var(--main-green-color);
+}
+
+.journal-entry-header .discard:hover {
+  color: white;
+  background-color: var(--main-red-color);
+}
+
+.journal-entry-header .done {
+  background: var(--main-green-color);
+  color: white;
+}
+
+.journal-entry-header .done:hover {
+  opacity: 0.8;
+}
+
+.entry-exist {
+  background-color: blue;
+}
